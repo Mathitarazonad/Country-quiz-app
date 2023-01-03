@@ -5,10 +5,11 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setQuiz } from '../store/gameSlice';
 import { getQuizSetup } from '../functions';
+import Results from './Results';
 
 export default function Game() {
   const dispatch = useDispatch();
-  const {allCountries} = useSelector(store => store.game);
+  const {allCountries, isWinning} = useSelector(store => store.game);
 
   useEffect(() => {
     const {reference, answer, options, questionOption: question} = getQuizSetup(allCountries);
@@ -17,9 +18,12 @@ export default function Game() {
 
   return (
     <div className='game'>
-      <h2>Country Quiz</h2>
-      <GamePlaying />
-      <Streaks />
+      {isWinning ? 
+      <>
+        <h2>Country Quiz</h2>
+        <GamePlaying />
+        <Streaks /> 
+      </> : <Results />}
     </div>
   )
 }
