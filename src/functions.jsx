@@ -51,3 +51,28 @@ function shuffleArray (array) {
   }
   return array.flat()
 }
+
+export function getQuestion (questionType, reference) {
+  //0-Flag question, 1-Capital of Country Question, 2-Country Capital Question
+  if (questionType === 0) {
+    return (
+      <>
+        <img src={`${reference}`} alt='countryFlag' />
+        <p className='question'>Which country does this flag belong to?</p>
+      </>
+    )
+  } else if (questionType === 1) {
+    return (
+      <>
+        <p className='question'>{`${reference} is the capital of`}</p>
+      </>
+    )
+  } else if (questionType === 2) {
+    return (
+      <>
+        <p className='question'>{`The capital of ${reference} is`}</p>
+      </>
+    )
+  }
+
+}
