@@ -4,6 +4,7 @@ import gameImage from '../images/human.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { setIfUserHasChosen, setQuiz } from '../store/gameSlice';
 import { getQuizSetup } from '../functions';
+import Question from './Question';
 
 export default function GamePlaying() {
   const dispatch = useDispatch();
@@ -17,8 +18,8 @@ export default function GamePlaying() {
 
   return (
     <div className='game-container'>
-      <img src={gameImage} alt='gameImg' />
-      <p>Asuncion is the capital of</p>
+      <img src={gameImage} alt='gameImg' className='quiz-img'/>
+      <Question />
       <Options />
       {userHasChosen && <button className='next-btn' onClick={() => handleNext}>Next</button>}
     </div>
