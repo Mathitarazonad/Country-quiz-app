@@ -8,9 +8,11 @@ const initialState = {
   userHasChosen: false,
   quiz: {
     question: 0,
+    reference: '',
     answer: '',
     options: [],
-  }
+  },
+  allCountries: []
 }
 
 const gameSlice = createSlice({
@@ -33,11 +35,14 @@ const gameSlice = createSlice({
       state.userHasChosen = !state.userHasChosen;
     },
     setQuiz: (state, action) => {
-      const [question, answer, options] = action.payload;
-      state.quiz = {question, answer, options}; 
+      const {reference, question, answer, options} = action.payload;
+      state.quiz = {reference, question, answer, options}; 
     },
+    setAllCountries: (state, action) => {
+      state.allCountries = action.payload;
+    }
   }
 });
 
 export default gameSlice.reducer;
-export const {setIfIsPlaying, setCurrentStreak, setBestStreak, setIfIsWinning, setIfUserHasChosen, setQuiz} = gameSlice.actions;
+export const {setIfIsPlaying, setCurrentStreak, setBestStreak, setIfIsWinning, setIfUserHasChosen, setQuiz, setAllCountries} = gameSlice.actions;
