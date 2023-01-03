@@ -21,7 +21,7 @@ export default function GamePlaying() {
       <img src={gameImage} alt='gameImg' className='quiz-img'/>
       <Question />
       <Options />
-      {userHasChosen && <button className='next-btn' onClick={() => handleNext}>Next</button>}
+      {userHasChosen && <button className='next-btn' onClick={() => handleNext()}>Next</button>}
     </div>
   )
 }
