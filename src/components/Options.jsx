@@ -30,22 +30,22 @@ export default function Options() {
       <div className={getClassName(correct, incorrect, 0)} onClick={() => handleOption(options[0], 0)}>
         <p className='option-letter'>A</p>
         <p className='option-text'>{options[0]}</p>
-        {getAnswerIcon(correct, incorrect, 0)}
+        <div className='answer-icon-container'>{getAnswerIcon(correct, incorrect, 0)}</div>
       </div>
       <div className={getClassName(correct, incorrect, 1)} onClick={() => handleOption(options[1], 1)}>
         <p className='option-letter'>B</p>
         <p className='option-text'>{options[1]}</p>
-        {getAnswerIcon(correct, incorrect, 1)}
+        <div className='answer-icon-container'>{getAnswerIcon(correct, incorrect, 1)}</div>
       </div>
       <div className={getClassName(correct, incorrect, 2)} onClick={() => handleOption(options[2], 2)}>
         <p className='option-letter'>C</p>
         <p className='option-text'>{options[2]}</p>
-        {getAnswerIcon(correct, incorrect, 2)}
+        <div className='answer-icon-container'>{getAnswerIcon(correct, incorrect, 2)}</div>
       </div>
       <div className={getClassName(correct, incorrect, 3)} onClick={() => handleOption(options[3], 3)}>
         <p className='option-letter'>D</p>
         <p className='option-text'>{options[3]}</p>
-        {getAnswerIcon(correct, incorrect, 3)}
+        <div className='answer-icon-container'>{getAnswerIcon(correct, incorrect, 3)}</div>
       </div>
     </div>
   )
