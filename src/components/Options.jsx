@@ -1,16 +1,19 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setCurrentStreak, setIfUserHasChosen, setStop } from '../store/gameSlice';
+import { setCurrentStreak, setIfUserHasChosen, setStop, setBestStreak } from '../store/gameSlice';
 
 export default function Options() {
   const dispatch = useDispatch();
-  const {currentStreak, userHasChosen} = useSelector(store => store.game)
+  const {currentStreak, userHasChosen, bestStreak} = useSelector(store => store.game)
   const {options, answer} = useSelector(store => store.game.quiz);
 
   const handleOption = option => {
     if (answer === option && !userHasChosen) {
       dispatch(setCurrentStreak(currentStreak + 1));
       dispatch(setIfUserHasChosen());
+      if (bestStreak < currentStreak + 1) {
+        dispatch(setBestStreak(currentStreak + 1));
+      }
     } else if(answer !== option && !userHasChosen) {
       dispatch(setIfUserHasChosen());
       dispatch(setStop());
