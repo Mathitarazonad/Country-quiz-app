@@ -1,6 +1,7 @@
 @use 'menu';
 @use 'variables' as*;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap');
+@use 'game';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
   margin: 0;
@@ -23,7 +24,7 @@ footer {
   position: absolute;
   bottom: 1.5rem;
   text-align: center;
-  padding: .5rem;
+  padding: 0 .5rem;
   color: $Card-background;
 
   a {
