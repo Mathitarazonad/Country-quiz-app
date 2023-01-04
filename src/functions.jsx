@@ -1,3 +1,4 @@
+import {AiOutlineCheckCircle, AiOutlineCloseCircle} from 'react-icons/ai';
 
 export function getQuizSetup (allCountries) {
   allCountries = allCountries.filter(country => country.capital !== undefined)
@@ -84,5 +85,13 @@ export function getClassName(correct, incorrect, index) {
     return 'option incorrect';
   } else {
     return 'option'
+  }
+}
+
+export function getAnswerIcon(correct, incorrect, index) {
+  if (correct === index) {
+    return <AiOutlineCheckCircle className='answer-icon correct'/>
+  } else if (incorrect === index) {
+    return <AiOutlineCloseCircle className='answer-icon incorrect'/>
   }
 }
