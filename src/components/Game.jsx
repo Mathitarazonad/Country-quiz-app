@@ -18,12 +18,11 @@ export default function Game() {
 
   return (
     <div className='game'>
-      {isWinning ? 
-      <>
         <h2>Country Quiz</h2>
-        <GamePlaying />
-        <Streaks /> 
-      </> : <Results />}
+        {isWinning ? <>
+          <GamePlaying />
+          <Streaks /> </>:
+          <Results />}
     </div>
   )
 }
