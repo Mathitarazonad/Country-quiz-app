@@ -20,7 +20,7 @@ export default function Results() {
     <div className='results-container'>
       <img src={ResultsImg} alt='winnerImg' className='results-img'/>
       <h3>Results</h3>
-      <p className='results-text'>You got <b className='result'>{currentStreak}</b> correct answers!</p>
+      <p className='results-text'>You got <b className={currentStreak > 0 ? 'result' : 'result red'}>{currentStreak}</b> correct answers!</p>
       <button className='try-again-btn' onClick={() => handleReset()}>Try Again</button>
     </div>
   )
