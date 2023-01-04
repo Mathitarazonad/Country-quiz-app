@@ -1,8 +1,6 @@
 import {AiOutlineCheckCircle, AiOutlineCloseCircle} from 'react-icons/ai';
 
 export function getQuizSetup (allCountries) {
-  allCountries = allCountries.filter(country => country.capital !== undefined)
-
   //0-Flag question, 1-Capital of Country Question, 2-Country Capital Question
   const questionOption = Math.round(Math.random() * 2);
 
