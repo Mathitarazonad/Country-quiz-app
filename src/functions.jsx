@@ -76,3 +76,13 @@ export function getQuestion (questionType, reference) {
   }
 
 }
+
+export function getClassName(correct, incorrect, index) {
+  if (correct === index) {
+    return 'option correct';
+  } else if (incorrect === index) {
+    return 'option incorrect';
+  } else {
+    return 'option'
+  }
+}
