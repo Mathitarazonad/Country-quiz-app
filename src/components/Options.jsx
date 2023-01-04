@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getClassName } from '../functions';
 import { setCurrentStreak, setIfUserHasChosen, setStop, setBestStreak, setChoices } from '../store/gameSlice';
