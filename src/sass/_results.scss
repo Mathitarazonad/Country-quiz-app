@@ -1,0 +1,37 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.results-container {
+  @include card();
+  width: 100%;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+
+  .results-img {
+    width: 180px;
+  }
+
+  h3 {
+    font-size: 2.5em;
+    color: $Font-color;
+  }
+
+  .results-text {
+    color: $Font-color;
+    font-size: 1.05em;
+
+    .result {
+      color: $Correct-option;
+      font-size: 1.75rem;
+
+      &.red {
+        color: $Incorrect-option;
+      }
+    }
+  }
+
+  .try-again-btn {
+    @include btn();
+    font-weight: 500;
+  }
+}
