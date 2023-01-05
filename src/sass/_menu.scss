@@ -1,5 +1,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
+@use 'animations' as *;
 
 .main-menu {
   @include card();
@@ -7,6 +8,7 @@
   gap: 1.5rem;
   padding: 1rem 2rem;
   font-size: 1rem;
+  animation: drop-down .25s linear both;
 
   h1 {
     color: $Font-color;

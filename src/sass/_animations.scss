@@ -1,0 +1,21 @@
+@keyframes drop-down {
+  from {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes come-from-left {
+  from {
+    transform: translateX(-150%);
+    opacity: 0;
+  } 
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}

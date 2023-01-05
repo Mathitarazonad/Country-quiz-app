@@ -1,16 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@-webkit-keyframes drop-down {
+  from {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes drop-down {
+  from {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes come-from-left {
+  from {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes come-from-left {
+  from {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 .main-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.912);
+  background-color: rgba(255, 255, 255, 0.946);
   border-radius: 15px;
   max-width: 350px;
   width: 80%;
   gap: 1.5rem;
   padding: 1rem 2rem;
   font-size: 1rem;
+  -webkit-animation: drop-down 0.25s linear both;
+          animation: drop-down 0.25s linear both;
 }
 .main-menu h1 {
   color: #1D355D;
@@ -55,7 +97,7 @@
   flex-direction: column;
 }
 .game .back-btn {
-  color: white;
+  color: rgba(255, 255, 255, 0.946);
   position: absolute;
   left: 1rem;
   top: 1rem;
@@ -76,7 +118,7 @@
   text-transform: uppercase;
   text-align: start;
   width: 100%;
-  color: white;
+  color: rgba(255, 255, 255, 0.946);
   letter-spacing: 0.75px;
   font-weight: 700;
 }
@@ -86,7 +128,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.912);
+  background-color: rgba(255, 255, 255, 0.946);
   border-radius: 15px;
   max-width: 350px;
   padding: 2rem 1.5rem;
@@ -95,6 +137,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
+  -webkit-animation: come-from-left 0.25s linear both;
+          animation: come-from-left 0.25s linear both;
 }
 .game .game-container .quiz-img {
   position: absolute;
@@ -140,22 +184,22 @@
   }
   .game .game-container .options-container .option:hover {
     transition: 0.25s;
-    border-color: white;
+    border-color: rgba(255, 255, 255, 0.946);
     background-color: #fba51a;
-    color: white;
+    color: rgba(255, 255, 255, 0.946);
   }
 }
 .game .game-container .options-container .option.correct {
   transition: 0.5s;
   background-color: #6ad295;
-  color: white;
-  border-color: white;
+  color: rgba(255, 255, 255, 0.946);
+  border-color: rgba(255, 255, 255, 0.946);
 }
 .game .game-container .options-container .option.incorrect {
   transition: 0.5s;
   background-color: #ea8989;
-  color: white;
-  border-color: white;
+  color: rgba(255, 255, 255, 0.946);
+  border-color: rgba(255, 255, 255, 0.946);
 }
 .game .game-container .options-container .option .option-letter {
   margin-right: 1.4rem;
@@ -189,7 +233,7 @@
 }
 .game .game-container .next-btn-container .next-btn {
   font-size: 0.9rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.946);
   font-weight: 500;
   letter-spacing: 0.5px;
   padding: 0.5rem 1.5rem;
@@ -212,7 +256,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: rgba(255, 255, 255, 0.946);
 }
 .game .best-streak-container h3 {
   text-align: center;
@@ -225,12 +269,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.912);
+  background-color: rgba(255, 255, 255, 0.946);
   border-radius: 15px;
   max-width: 350px;
   width: 100%;
   padding: 2rem 1rem;
   gap: 1.5rem;
+  -webkit-animation: drop-down 0.25s linear both;
+          animation: drop-down 0.25s linear both;
 }
 .results-container .results-img {
   width: 180px;
@@ -295,10 +341,10 @@ footer {
   bottom: 1rem;
   text-align: center;
   padding: 0 0.5rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.946);
 }
 footer a {
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.946);
   font-weight: 600;
 }/*# sourceMappingURL=main.css.map */

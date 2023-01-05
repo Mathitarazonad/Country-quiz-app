@@ -47,6 +47,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
+    animation: come-from-left .25s linear both;
 
     .quiz-img {
       position: absolute;
