@@ -20,6 +20,7 @@
     @media screen and (min-width:1000px) {
       transition: .5s;
       font-size: 3.5rem;
+      cursor: pointer;
 
       &:hover {
         transform: scale(1.1);

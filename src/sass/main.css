@@ -65,6 +65,7 @@
   .game .back-btn {
     transition: 0.5s;
     font-size: 3.5rem;
+    cursor: pointer;
   }
   .game .back-btn:hover {
     transform: scale(1.1);
