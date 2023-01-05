@@ -4,6 +4,7 @@ import { getQuizSetup } from '../functions';
 import ResultsImg from '../images/winners.svg';
 import { setCurrentStreak, setIfIsWinning } from '../store/gameSlice';
 import { setQuiz } from '../store/gameSlice';
+import nextMp3 from '../sounds/next.mp3';
 
 export default function Results() {
   const dispatch = useDispatch()
@@ -14,6 +15,7 @@ export default function Results() {
     dispatch(setIfIsWinning(true));
     const {reference, answer, options, questionOption: question} = getQuizSetup(allCountries);
     dispatch(setQuiz({reference, answer, options, question}));
+    new Audio(nextMp3).play();
   }
 
   return (

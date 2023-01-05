@@ -2,6 +2,8 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIfUserHasChosen, setChoices, setQuiz, setIfIsWinning, setStop } from '../store/gameSlice';
 import { getQuizSetup } from '../functions';
+import nextMp3 from '../sounds/next.mp3';
+import resultsMp3 from '../sounds/result.mp3';
 
 export default function NextButton() {
   const dispatch = useDispatch();
@@ -15,6 +17,9 @@ export default function NextButton() {
     if (stop) {
       dispatch(setIfIsWinning(false));
       dispatch(setStop());
+      new Audio(resultsMp3).play();
+    } else {
+      new Audio(nextMp3).play();
     }
   }
 

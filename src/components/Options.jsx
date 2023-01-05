@@ -2,6 +2,8 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getAnswerIcon, getClassName } from '../functions';
 import { setCurrentStreak, setIfUserHasChosen, setStop, setBestStreak, setChoices } from '../store/gameSlice';
+import correctMp3 from '../sounds/correct.mp3';
+import incorrectMp3 from '../sounds/wrong.mp3'; 
 
 export default function Options() {
   const dispatch = useDispatch();
@@ -13,7 +15,8 @@ export default function Options() {
     if (answer === option && !userHasChosen) {
       dispatch(setCurrentStreak(currentStreak + 1));
       dispatch(setIfUserHasChosen());
-      dispatch(setChoices({correct: index, incorrect}))
+      dispatch(setChoices({correct: index, incorrect}));
+      new Audio(correctMp3).play();
 
       if (bestStreak < currentStreak + 1) {
         dispatch(setBestStreak(currentStreak + 1));
@@ -22,6 +25,7 @@ export default function Options() {
       dispatch(setIfUserHasChosen());
       dispatch(setStop());
       dispatch(setChoices({correct: options.indexOf(answer), incorrect: index}))
+      new Audio(incorrectMp3).play();
     }
   }
 

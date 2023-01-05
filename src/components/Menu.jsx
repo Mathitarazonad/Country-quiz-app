@@ -2,6 +2,7 @@ import React from 'react';
 import gameImage from '../images/human.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIfIsPlaying } from '../store/gameSlice';
+import nextMp3 from '../sounds/next.mp3';
 
 export default function Menu() {
   const dispatch = useDispatch()
@@ -9,6 +10,7 @@ export default function Menu() {
   
   const handlePlay = () => {
     dispatch(setIfIsPlaying());
+    new Audio(nextMp3).play();
   }
 
   return (
