@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setQuiz } from '../store/gameSlice';
 import { getQuizSetup } from '../functions';
 import Results from './Results';
+import BackButton from './BackButton';
 
 export default function Game() {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ export default function Game() {
 
   return (
     <div className='game'>
+        <BackButton />
         <h2>Country Quiz</h2>
         {isWinning ? <>
           <GamePlaying />
