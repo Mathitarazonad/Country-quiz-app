@@ -44,7 +44,7 @@ const gameSlice = createSlice({
       state.quiz = {reference, question, answer, options}; 
     },
     setAllCountries: (state, action) => {
-      state.allCountries = action.payload.filter(country => country.capital !== undefined && country.capital !== null);
+      state.allCountries = action.payload.filter(country => country.name.common !== null && country.capital !== undefined && country.capital !== null);
     },
     setStop: state => {
       state.stop = !state.stop;
