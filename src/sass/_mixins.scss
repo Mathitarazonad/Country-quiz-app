@@ -7,6 +7,7 @@
   justify-content: center;
   background-color: $Card-background;
   border-radius: 15px;
+  max-width: 350px;
 }
 
 @mixin btn {
@@ -19,4 +20,13 @@
   background: none;
   border: 2px solid $Font-color;
   border-radius: 10px;
+
+  @media screen and (min-width: 1000px) {
+    transition: .5s;
+    cursor: pointer;
+    &:hover {
+      transition: .5s;
+      transform: scale(0.95);
+    }
+  }
 }

@@ -6,6 +6,7 @@
   justify-content: center;
   background-color: white;
   border-radius: 15px;
+  max-width: 350px;
   width: 80%;
   gap: 1.5rem;
   padding: 1rem 2rem;
@@ -32,6 +33,16 @@
   background: none;
   border: 2px solid #1D355D;
   border-radius: 10px;
+}
+@media screen and (min-width: 1000px) {
+  .main-menu .play-btn {
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .main-menu .play-btn:hover {
+    transition: 0.5s;
+    transform: scale(0.95);
+  }
 }
 
 .game {
@@ -60,6 +71,7 @@
   justify-content: center;
   background-color: white;
   border-radius: 15px;
+  max-width: 350px;
   padding: 2rem 1.5rem;
   position: relative;
   height: auto;
@@ -75,6 +87,7 @@
 }
 .game .game-container .question-container {
   margin-top: 0.5rem;
+  width: 100%;
 }
 .game .game-container .question-container .question {
   font-size: 1.15rem;
@@ -102,6 +115,18 @@
   font-size: 0.85em;
   color: #888DDB;
   font-weight: 600;
+}
+@media screen and (min-width: 1000px) {
+  .game .game-container .options-container .option {
+    cursor: pointer;
+    transition: 0.25s;
+  }
+  .game .game-container .options-container .option:hover {
+    transition: 0.25s;
+    border-color: white;
+    background-color: #fba51a;
+    color: white;
+  }
 }
 .game .game-container .options-container .option.correct {
   transition: 0.5s;
@@ -158,6 +183,16 @@
   background-color: #fba51a;
   border-radius: 10px;
 }
+@media screen and (min-width: 1000px) {
+  .game .game-container .next-btn-container .next-btn {
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  .game .game-container .next-btn-container .next-btn:hover {
+    transition: 0.25s;
+    transform: scale(0.95);
+  }
+}
 .game .best-streak-container {
   width: 100%;
   display: flex;
@@ -177,6 +212,7 @@
   justify-content: center;
   background-color: white;
   border-radius: 15px;
+  max-width: 350px;
   width: 100%;
   padding: 2rem 1rem;
   gap: 1.5rem;
@@ -210,6 +246,16 @@
   border: 2px solid #1D355D;
   border-radius: 10px;
   font-weight: 500;
+}
+@media screen and (min-width: 1000px) {
+  .results-container .try-again-btn {
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .results-container .try-again-btn:hover {
+    transition: 0.5s;
+    transform: scale(0.95);
+  }
 }
 
 * {
