@@ -54,6 +54,22 @@
   display: flex;
   flex-direction: column;
 }
+.game .back-btn {
+  color: white;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 1000px) {
+  .game .back-btn {
+    transition: 0.5s;
+    font-size: 3.5rem;
+  }
+  .game .back-btn:hover {
+    transform: scale(1.1);
+  }
+}
 .game h2 {
   font-size: 1.4em;
   text-transform: uppercase;
