@@ -86,16 +86,14 @@
           transition: .5s;
           background-color: $Correct-option;
           color: $Card-background;
-          padding: .6rem 1rem;
-          border: none;
+          border-color: $Card-background;
         }
 
         &.incorrect {
           transition: .5s;
           background-color: $Incorrect-option;
           color: $Card-background;
-          padding: .6rem 1rem;
-          border: none;
+          border-color: $Card-background;
         }
 
         .option-letter {
