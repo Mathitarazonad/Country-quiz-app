@@ -39,6 +39,34 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes shuffle {
+  0% {
+    transform: translateX(15%);
+  }
+  25% {
+    transform: translateX(-15%);
+  }
+  50% {
+    transform: translateX(15%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes shuffle {
+  0% {
+    transform: translateX(15%);
+  }
+  25% {
+    transform: translateX(-15%);
+  }
+  50% {
+    transform: translateX(15%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 .main-menu {
   display: flex;
   flex-direction: column;

@@ -19,3 +19,18 @@
     opacity: 1;
   }
 }
+
+@keyframes shuffle {
+  0% {
+    transform: translateX(15%);
+  }
+  25% {
+    transform: translateX(-15%);
+  }
+  50% {
+    transform: translateX(15%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
