@@ -17,7 +17,8 @@ const initialState = {
   choices: {
     correct: undefined,
     incorrect: undefined,
-  }
+  },
+  timeOut: 10,
 }
 
 const gameSlice = createSlice({
@@ -51,9 +52,12 @@ const gameSlice = createSlice({
     },
     setChoices: (state, action) => {
       state.choices = action.payload
+    },
+    setTimeOut: (state, action) => {
+      state.timeOut = action.payload;
     }
   }
 });
 
 export default gameSlice.reducer;
-export const {setIfIsPlaying, setCurrentStreak, setBestStreak, setIfIsWinning, setIfUserHasChosen, setQuiz, setAllCountries, setStop, setChoices} = gameSlice.actions;
+export const {setIfIsPlaying, setCurrentStreak, setBestStreak, setIfIsWinning, setIfUserHasChosen, setQuiz, setAllCountries, setStop, setChoices, setTimeOut} = gameSlice.actions;
