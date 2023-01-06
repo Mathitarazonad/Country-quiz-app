@@ -16,7 +16,8 @@ export default function Counter() {
     }, 1000);
 
     return () => clearInterval(interval);
-    } else if (timeOut === 0){
+    }
+    else if (timeOut === 0 && !userHasChosen){
       dispatch(setIfUserHasChosen());
       dispatch(setStop());
       dispatch(setChoices({correct: options.indexOf(answer), incorrect: undefined}))
